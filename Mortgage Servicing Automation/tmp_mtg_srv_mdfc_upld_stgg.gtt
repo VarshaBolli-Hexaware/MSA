@@ -1,0 +1,30 @@
+create global temporary table tmp_mtg_srv_update_upld_stgg
+ 
+(
+  bch_id                  		number(15)            not null,
+  tran_id                 		number(15)            not null,
+  run_ptit_id             		number(15)            not null,
+  mtg_ln_id               		varchar2(20 byte)     not null,
+  bank_ast_id             		number(15),
+  ln_mtg_srv_update_dt         		date,
+  mtg_tran_st_chg_usr_id  		varchar2(30 byte),
+  tran_rseg_id            		number(15)            not null,
+  ln_darts_id             		varchar2(20 byte),
+  cancl_dt                		date,
+  tran_smss_src_cd        		number(4),
+  mtg_tran_grp_id         		number(15),
+  mtg_tran_id                    	number(15),
+  mtg_mtg_srv_update_clsd_dt           	date,
+  mtg_mtg_srv_update_cncl_dt           	date,
+  mtg_mtg_srv_update_cd                	number(4),
+  mtg_mtg_srv_update_clsd_cncld_ind    	char(1),
+  mtg_mtg_srv_update_eff_dt            	date,
+  mtg_tran_orig_stat_cd			number(4),
+  mtg_tran_st_cd			number(4),
+  ltst_darts_id				varchar2(20 byte),
+  mtg_rule_id				number(4),
+  mtg_tran_curr_st_cd			number(4),
+  ltst_update_cncln_ind			char(1),
+  ln_stat_cd				number(4)
+)
+on commit delete rows;

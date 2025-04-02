@@ -1,0 +1,33 @@
+create global temporary table tmp_mtg_srv_tran_actn
+
+(
+  mtg_tran_actn_id         number(15),
+  mtg_tran_actn_typ_cd     number(4),
+  obj_id                   number(15),
+  mtg_tran_id              number(15),
+  mtg_actn_dt              date,
+  ln_aft_update_amrt_typ_cd  number(4),
+  ln_feat_id               number(15),
+  ln_feat_eff_dt           date,
+  cren_dt                  date,
+  last_upd_dt              date
+)
+on commit delete rows;
+comment on table tmp_mtg_srv_tran_actn
+  is 'temporary table stores all mtg tran action transactions.';
+comment on column tmp_mtg_srv_tran_actn.mtg_tran_actn_id
+  is '. ';
+comment on column tmp_mtg_srv_tran_actn.mtg_tran_actn_typ_cd
+  is '. ';
+comment on column tmp_mtg_srv_tran_actn.obj_id
+  is '. ';
+comment on column tmp_mtg_srv_tran_actn.mtg_tran_id
+  is '. ';
+comment on column tmp_mtg_srv_tran_actn.mtg_actn_dt
+  is '. ';
+comment on column tmp_mtg_srv_tran_actn.ln_aft_update_amrt_typ_cd
+  is '. ';
+comment on column tmp_mtg_srv_tran_actn.ln_feat_id
+  is '. ';
+comment on column tmp_mtg_srv_tran_actn.ln_feat_eff_dt
+  is '. ';

@@ -1,0 +1,14 @@
+create global temporary table tmp_mtg_srv_cncl_tran
+ 
+(
+  mtg_tran_id             number(15),
+  tran_smss_src_cd        number(3),
+  mtg_tran_st_chg_usr_id  varchar2(20 byte),
+  ln_mtg_srv_update_dt         date,
+  bank_ast_id             number(15),
+  mtg_tran_st_cd          number(3),
+  mtg_rule_id             number(15),
+  mtg_tran_orig_id        number(15),
+  mtg_tran_grp_id         number(15)
+)
+on commit delete rows;

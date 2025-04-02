@@ -1,0 +1,27 @@
+create global temporary table tmp_mtg_srv_rule_rslt
+( 
+  mtg_rule_rslt_id     number(15),
+  mtg_rule_id          number(15),
+  mtg_sys_sstr_typ_cd  number(15),
+  mtg_rule_excn_dt     date,
+  mtg_rule_rslt_fnl_cd number(15),
+  mtg_tran_id          number(15),
+  ver_no               number(5)
+)
+on commit delete rows;
+comment on table tmp_mtg_srv_rule_rslt
+  is 'temporary table is used to records the results of executing rules in the course of processing an del mod attribute change process transaction.';
+comment on column tmp_mtg_srv_rule_rslt.mtg_rule_rslt_id
+  is '. ';
+comment on column tmp_mtg_srv_rule_rslt.mtg_rule_id
+  is '. ';
+comment on column tmp_mtg_srv_rule_rslt.mtg_sys_sstr_typ_cd
+  is '. ';
+comment on column tmp_mtg_srv_rule_rslt.mtg_rule_excn_dt
+  is '. ';
+comment on column tmp_mtg_srv_rule_rslt.mtg_rule_rslt_fnl_cd
+  is '. ';
+comment on column tmp_mtg_srv_rule_rslt.mtg_tran_id
+  is '. ';
+comment on column tmp_mtg_srv_rule_rslt.ver_no
+  is '. ';

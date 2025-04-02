@@ -1,0 +1,55 @@
+create global temporary table tmp_mtg_srv_bank_ast_cflw_def
+
+( 
+  bank_ast_cflw_def_id       number(15),
+  bank_ast_id                number(15),
+  cflw_typ_cd                number(15),
+  bank_ast_cflw_def_eff_dt   date,
+  bank_ast_cflw_def_expt_dt  date,
+  cflw_bas_typ_cd            number(15),
+  bank_ast_cflw_calc_mthd_cd number(5),
+  cflw_rt                    number(14,10),
+  cflw_amt                   number(14,10),
+  cflw_adv_typ_cd            number(5),
+  cflw_adv_per               number(5),
+  cflw_rcvy_cd               number(5),
+  cflw_rcvy_per              number(5),
+  cflw_adv_frqy_cd           number(5),
+  rmtt_pmt_mthd_cd           number(5),
+  cflw_rmtt_typ_cd           number(5)
+)
+on commit delete rows;
+comment on table tmp_mtg_srv_bank_ast_cflw_def
+  is 'temporary table is used to store all cash flow definitions used for mtg srv batch.';
+comment on column tmp_mtg_srv_bank_ast_cflw_def.bank_ast_cflw_def_id
+  is '. ';
+comment on column tmp_mtg_srv_bank_ast_cflw_def.bank_ast_id
+  is '. ';
+comment on column tmp_mtg_srv_bank_ast_cflw_def.cflw_typ_cd
+  is '. ';
+comment on column tmp_mtg_srv_bank_ast_cflw_def.bank_ast_cflw_def_eff_dt
+  is '. ';
+comment on column tmp_mtg_srv_bank_ast_cflw_def.bank_ast_cflw_def_expt_dt
+  is '. ';
+comment on column tmp_mtg_srv_bank_ast_cflw_def.cflw_bas_typ_cd
+  is '. ';
+comment on column tmp_mtg_srv_bank_ast_cflw_def.bank_ast_cflw_calc_mthd_cd
+  is '. ';
+comment on column tmp_mtg_srv_bank_ast_cflw_def.cflw_rt
+  is '. ';
+comment on column tmp_mtg_srv_bank_ast_cflw_def.cflw_amt
+  is '. ';
+comment on column tmp_mtg_srv_bank_ast_cflw_def.cflw_adv_typ_cd
+  is '. ';
+comment on column tmp_mtg_srv_bank_ast_cflw_def.cflw_adv_per
+  is '. ';
+comment on column tmp_mtg_srv_bank_ast_cflw_def.cflw_rcvy_cd
+  is '. ';
+comment on column tmp_mtg_srv_bank_ast_cflw_def.cflw_rcvy_per
+  is '. ';
+comment on column tmp_mtg_srv_bank_ast_cflw_def.cflw_adv_frqy_cd
+  is '. ';
+comment on column tmp_mtg_srv_bank_ast_cflw_def.rmtt_pmt_mthd_cd
+  is '. ';
+comment on column tmp_mtg_srv_bank_ast_cflw_def.cflw_rmtt_typ_cd
+  is '. ';
